@@ -3,6 +3,13 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# PyCharm
+.idea/
+
+# Extras
+bin
+*.sqlite3
+
 # C extensions
 *.so
 
