@@ -15,6 +15,4 @@ INSTALL:
   - pipenv sync -d
 
 script:
-  - pipenv shell
-  - flake8
-  - exit
+  - pipenv run flake8 .
