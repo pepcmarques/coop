@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <h1>New/Update Cooperative</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy}}
+        <button type="submit">Save</button>
+    </form>
+
+    {% if cooperative %}
+        <a href="{% url 'delete_cooperative' cooperative.coop_name %}">Delete</a>
+    {% endif %}
+{% endblock %}

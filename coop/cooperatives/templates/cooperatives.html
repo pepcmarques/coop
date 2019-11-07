@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <ul>
+        {% for cooperative in cooperatives %}
+            <a href="{% url 'update_cooperative' cooperative.coop_name %}">
+                <li>{{ cooperative.coop_name }}</li>
+            </a>
+        {% endfor %}
+    </ul>
+{% endblock %}
